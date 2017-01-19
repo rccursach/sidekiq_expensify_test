@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   require 'sidekiq/web'
   mount Sidekiq::Web => "/sidekiq"
 
+  resources :exp_settings
+  resources :organizations
+
+  get "/organizations/import_data/:id" => "organizations#import_data"
 end
