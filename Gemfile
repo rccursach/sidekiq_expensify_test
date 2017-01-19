@@ -31,6 +31,9 @@ gem 'sidekiq'
 # with rails 5
 gem 'sinatra', github: 'sinatra/sinatra'
 
+# Expensify integration Server API
+gem 'expensirb', github: 'rccursach/expensirb'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

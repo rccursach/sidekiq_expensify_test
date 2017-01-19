@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/rccursach/expensirb.git
+  revision: a17d00d12ebf630072336869dd3656d09d7d2465
+  specs:
+    expensirb (0.0.1)
+      rest-client
+
+GIT
   remote: https://github.com/sinatra/sinatra.git
   revision: 9bd0d40229f76ff60d81c01ad2f4b1a8e6f31e05
   specs:
@@ -55,10 +62,14 @@ GEM
     byebug (9.0.6)
     concurrent-ruby (1.0.4)
     connection_pool (2.2.1)
+    domain_name (0.5.20161129)
+      unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     ffi (1.9.17)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
     i18n (0.7.0)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -74,6 +85,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     mustermann (1.0.0.beta2)
+    netrc (0.11.0)
     nio4r (1.2.1)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
@@ -110,6 +122,10 @@ GEM
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     redis (3.3.2)
+    rest-client (2.0.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     sidekiq (4.2.9)
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
@@ -132,6 +148,9 @@ GEM
     tilt (2.0.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -141,6 +160,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  expensirb!
   listen (~> 3.0.5)
   pg (~> 0.18)
   puma (~> 3.0)
