@@ -8,8 +8,9 @@ class OrganizationsController < ApplicationController
     if (@organization.nil? or @organization.exp_setting.nil?)
       render json: { message: 'no organization found or incomplete settings record' }
     else
-      TestWorker.perform_async('a', 'b');
-      render json: { message: 'test job queued' }
+      # Sidekiq::Cron::Job.create(name: 'Test worker - every min', cron: '* * * * *', class: 'TestWorker')
+      # # TestWorker.perform_async('a', 'b');
+      # render json: { message: 'test job queued' }
     end
   end
 

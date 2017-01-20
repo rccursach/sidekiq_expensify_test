@@ -1,4 +1,5 @@
 test_job:
   cron: "* * * * *"
   class: "TestWorker"
-  queue: test
+  queue: default
+  active_job: false

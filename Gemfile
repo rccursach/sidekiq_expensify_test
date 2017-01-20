@@ -26,13 +26,16 @@ gem 'puma', '~> 3.0'
 # gem 'rack-cors'
 
 # Manage background processes with Sidekiq
-gem 'sidekiq'
+gem 'sidekiq', '~> 4.2.1'
 # For sidekiq's UI, fetch from source to avoid dependency problems
 # with rails 5
 gem 'sinatra', github: 'sinatra/sinatra'
 
+# set a working rufus-scheduler
+# http://stackoverflow.com/questions/40912825/cron-parameter-in-not-working-in-sidekiq-rails
+gem 'rufus-scheduler', '3.2.2'
 # cron-like scheduler for sidekiq jobs
-gem "sidekiq-cron", "~> 0.4.0"
+gem "sidekiq-cron", "~> 0.4.5"
 
 # Expensify integration Server API
 gem 'expensirb', github: 'rccursach/expensirb'
