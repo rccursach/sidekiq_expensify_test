@@ -31,6 +31,9 @@ gem 'sidekiq'
 # with rails 5
 gem 'sinatra', github: 'sinatra/sinatra'
 
+# cron-like scheduler for sidekiq jobs
+gem "sidekiq-cron", "~> 0.4.0"
+
 # Expensify integration Server API
 gem 'expensirb', github: 'rccursach/expensirb'
 
