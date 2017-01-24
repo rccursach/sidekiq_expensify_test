@@ -3,16 +3,18 @@
 module FSP
   class ExpensesImporter
 
-    def initialize
+    def initialize(user_id, user_secret)
+      @user_id = user_id
+      @user_secret = user_secret
     end
 
-    def import(user_id, user_secret)
+    def import
       template_path = 'ex_templates/all_csv.fm'
-      is_test = true # if test, it shouldn't modify any records
       label = 'sqktest_imported'
+      is_test = false
       creds = {
-        user_id: user_id,
-        user_secret: user_secret
+        user_id: @user_id,
+        user_secret: @user_secret
       }
       filters = {
         startDate: (Time.now() - 3600 * 24 * 360).strftime("%Y-%m-%d"),
