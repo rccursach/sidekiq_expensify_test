@@ -1,0 +1,2 @@
+class ImportedExpense < ApplicationRecord
+end
